@@ -1,7 +1,7 @@
 # Weave-webOS
-The goal of Weave-webOS is to bring [Firefox
+The goal of Weave-webOS is to bring a [Firefox
 Home](https://www.mozilla.org/en-US/mobile/home/)-like application to webOS
-devices. Specifically access to:
+devices. Specifically it will provide access to:
 
  * Tabs
  * Bookmarks
