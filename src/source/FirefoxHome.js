@@ -21,6 +21,10 @@ enyo.kind(
                             {
                                 caption: $L("Bookmarks"),
                                 value: "bookmarksView"
+                            },
+                            {
+                                caption: $L("History"),
+                                value: "historyView"
                             }]
                     }]
             },
@@ -30,7 +34,8 @@ enyo.kind(
                 flex: 1,
                 components: [
                     {kind: "tabsView"},
-                    {kind: "bookmarksView" }
+                    {kind: "bookmarksView"},
+                    {kind: "historyView"}
                 ]
             },
             {

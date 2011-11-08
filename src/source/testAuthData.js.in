@@ -1,0 +1,8 @@
+enyo.kind(
+    {
+        kind: enyo.Component,
+        name: "AuthData",
+        url: "https://CLUSTER.services.mozilla.com/1.1/USERNAME/storage/tabs/",
+        username: "USERNAME",
+        password: "PASSWORD"
+    });

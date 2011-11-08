@@ -1,9 +1,8 @@
 enyo.kind({
         name: "bookmarksView",
         kind: "VFlexBox",
-        className: "box-center",
+        onready: "ready",
         components: [
-            {kind: "Button", name: "getDataButton", caption: "Get Data", onclick: "getData"},
             {name: "getFeed", kind: "WebService",  onSuccess: "gotFeed", onFailure: "gotFeedFailure"},
             {name: "list", kind: "VirtualList", flex: 1, onSetupRow: "setupRow", components: [
                     {kind: "Item", name: "listItem", layoutKind: "HFlexLayout", onclick: "itemClick", components: [
@@ -11,6 +10,9 @@ enyo.kind({
                         ]}
                 ]}
         ],
+        ready: function() {
+            enyo.scrim.show();
+        },
         create: function() {
             this.inherited(arguments);
             this.results = [];
@@ -35,11 +37,6 @@ enyo.kind({
         },
         gotFeedFailure: function(inSender, inResponse){
             enyo.scrim.hide();
-        },
-        getData: function(){
-            this.$.getFeed.setUrl("http://192.168.0.104:9000/getplaylists");
-            this.$.getFeed.call();
-            enyo.scrim.show();
         }
     });
 
